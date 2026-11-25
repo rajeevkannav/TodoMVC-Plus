@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+    --surface-bg: light-dark(oklch(0.98 0.005 250), oklch(0.14 0.015 260));
+    --surface-card: light-dark(oklch(1 0 0), oklch(0.19 0.018 260));
+    --accent-primary: light-dark(oklch(0.52 0.21 262), oklch(0.68 0.18 258));
+  }
+
+  body {
+    background-color: var(--surface-bg);
+  }
+}
+
+.todo-shell {
+  container-type: inline-size;
+}
+
+.todo-row:has(input[type="checkbox"]:checked) {
+  background-color: color-mix(in oklch, var(--accent-primary) 5%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (forced-colors: active) {
+  .todo-card, button, input, select {
+    border: 1px solid ButtonText;
+  }
+}
