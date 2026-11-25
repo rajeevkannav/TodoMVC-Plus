@@ -1,0 +1,31 @@
+name: Build / Update TodoMVC+
+description: Trigger ProductionLine (mogra) to discover, spec, build, verify, and deploy a TodoMVC+ stack to GitHub Pages.
+title: "Build TodoMVC+"
+labels: ["mogra:intake"]
+body:
+  - type: dropdown
+    id: stack
+    attributes:
+      label: TodoMVC+ Stack
+      description: Select the target stack. The issue will be auto-updated with the stack name.
+      options:
+        - react19-ts-vite
+        - vue3-ts-vite
+        - svelte5-ts-vite
+        - angular-ts
+        - solid-ts-vite
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired Outcome & Standards
+      value: |
+        Build complete TodoMVC+ satisfying:
+        - WCAG 2.2 AA+ & 320px / 400% zoom zero-overflow reflow
+        - Ultra-modern CSS (Container Queries, :has(), Subgrid, View Transitions, Popover API, OKLCH + light-dark())
+        - Local-first IndexedDB persistence, BroadcastChannel multi-tab sync, Undo/Redo, offline PWA
+        - Strict OWASP frontend security (no unsafe DOM sinks, validated JSON import, CSP-ready)
+        - Playwright multi-viewport + axe-core zero-violation verification and GitHub Pages deployment
+    validations:
+      required: true

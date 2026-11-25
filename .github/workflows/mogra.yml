@@ -1,0 +1,18 @@
+name: ProductionLine (mogra)
+
+on:
+  issues:
+    types: [opened, labeled]
+  repository_dispatch:
+    types: [mogra.trigger]
+
+jobs:
+  mogra:
+    uses: rajeevkannav/ProductionLine/.github/workflows/mogra-sdlc.yml@main
+    with:
+      control_plane_repo: "rajeevkannav/ProductionLine"
+    secrets:
+      MOGRA_BOT_TOKEN: ${{ secrets.MOGRA_BOT_TOKEN }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
