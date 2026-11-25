@@ -1,0 +1,10 @@
+node_modules/
+dist/
+pages-dist/
+playwright-report/
+test-results/
+sbom.cdx.json
+.env
+.env.*
+*.log
+.DS_Store
