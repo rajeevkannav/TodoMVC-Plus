@@ -8,6 +8,10 @@ on:
 
 jobs:
   mogra:
+    if: >-
+      github.event_name != 'issues' ||
+      github.event.action == 'opened' ||
+      (github.event.action == 'labeled' && (github.event.label.name == 'mogra:approved' || github.event.label.name == 'mogra:run'))
     uses: rajeevkannav/ProductionLine/.github/workflows/mogra-sdlc.yml@main
     with:
       control_plane_repo: "rajeevkannav/ProductionLine"
