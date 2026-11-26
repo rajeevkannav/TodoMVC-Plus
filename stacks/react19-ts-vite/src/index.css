@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: light-dark(oklch(0.99 0.01 200), oklch(0.15 0.02 250));
+    --foreground: light-dark(oklch(0.2 0.02 250), oklch(0.95 0.01 200));
+    --primary: oklch(0.6 0.2 250);
+    --accent: oklch(0.7 0.15 150);
+    --border: light-dark(oklch(0.9 0.02 250), oklch(0.3 0.02 250));
+    --ring: oklch(0.6 0.2 250);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: system-ui, -apple-system, sans-serif;
+    min-height: 100dvh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  @media (forced-colors: active) {
+    :root {
+      --primary: CanvasText;
+      --accent: Highlight;
+    }
+  }
+}
+
+@layer components {
+  .todo-container {
+    container-type: inline-size;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] focus-visible:ring-offset-2;
+  }
+}
+
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
