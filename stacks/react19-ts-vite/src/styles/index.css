@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: oklch(0.6 0.15 250);
+  --color-bg: light-dark(oklch(0.98 0.01 250), oklch(0.15 0.02 250));
+  --color-surface: light-dark(oklch(1 0 0), oklch(0.2 0.02 250));
+  --color-text-main: light-dark(oklch(0.2 0.02 250), oklch(0.9 0.01 250));
+  --color-text-muted: light-dark(oklch(0.45 0.02 250), oklch(0.7 0.01 250));
+  --color-border: light-dark(oklch(0.9 0.01 250), oklch(0.3 0.02 250));
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    font-family: system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  *:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  @media (forced-colors: active) {
+    *:focus-visible {
+      outline: 2px solid CanvasText;
+    }
+  }
+}
+
+@layer components {
+  .todo-container {
+    container-type: inline-size;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .todo-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
