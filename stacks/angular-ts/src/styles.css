@@ -1,0 +1,8 @@
+@layer base, components;
+@layer base {
+  :root {
+    --bg-canvas: oklch(12.9% 0.042 264.695);
+    color-scheme: dark;
+  }
+  body { background: var(--bg-canvas); color: white; font-family: 'Inter', sans-serif; }
+}
