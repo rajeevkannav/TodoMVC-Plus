@@ -1,0 +1,19 @@
+@layer base, components, utilities;
+@layer base {
+  :root {
+    --bg-canvas: oklch(98.5% 0.004 248);
+    --bg-surface: oklch(100% 0 0);
+    --text-main: oklch(20.8% 0.042 265.755);
+    --border: oklch(12.9% 0.042 264.695 / 0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-canvas: oklch(12.9% 0.042 264.695);
+      --bg-surface: oklch(20.8% 0.042 265.755);
+      --text-main: oklch(98.5% 0.004 248);
+      --border: oklch(100% 0 0 / 0.10);
+    }
+  }
+  body { background: var(--bg-canvas); color: var(--text-main); font-family: 'Inter', sans-serif; margin: 0; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+}

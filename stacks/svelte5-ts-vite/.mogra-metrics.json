@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "provider": "google-ai-studio-free-tier",
+  "costUsd": 0,
+  "generatedAt": "2026-11-27T02:23:03.972Z",
+  "totals": {
+    "calls": 5,
+    "promptTokens": 29592,
+    "candidatesTokens": 3166,
+    "thoughtsTokens": 0,
+    "totalTokens": 32758,
+    "elapsedMs": 12303
+  },
+  "calls": [
+    {
+      "phase": "initial-build",
+      "timestamp": "2026-11-27T02:22:11.178Z",
+      "model": "gemini-3.1-flash-lite",
+      "elapsedMs": 3913,
+      "promptTokenCount": 3195,
+      "candidatesTokenCount": 1341,
+      "thoughtsTokenCount": 0,
+      "totalTokenCount": 4536
+    },
+    {
+      "phase": "repair-1",
+      "timestamp": "2026-11-27T02:22:26.738Z",
+      "model": "gemini-3.1-flash-lite",
+      "elapsedMs": 4559,
+      "promptTokenCount": 5752,
+      "candidatesTokenCount": 1062,
+      "thoughtsTokenCount": 0,
+      "totalTokenCount": 6814
+    },
+    {
+      "phase": "repair-2",
+      "timestamp": "2026-11-27T02:22:32.623Z",
+      "model": "gemini-3.1-flash-lite",
+      "elapsedMs": 1952,
+      "promptTokenCount": 7387,
+      "candidatesTokenCount": 556,
+      "thoughtsTokenCount": 0,
+      "totalTokenCount": 7943
+    },
+    {
+      "phase": "repair-3",
+      "timestamp": "2026-11-27T02:22:36.575Z",
+      "model": "gemini-3.1-flash-lite",
+      "elapsedMs": 777,
+      "promptTokenCount": 7451,
+      "candidatesTokenCount": 129,
+      "thoughtsTokenCount": 0,
+      "totalTokenCount": 7580
+    },
+    {
+      "phase": "repair-4",
+      "timestamp": "2026-11-27T02:22:39.222Z",
+      "model": "gemini-3.1-flash-lite",
+      "elapsedMs": 1102,
+      "promptTokenCount": 5807,
+      "candidatesTokenCount": 78,
+      "thoughtsTokenCount": 0,
+      "totalTokenCount": 5885
+    }
+  ]
+}
