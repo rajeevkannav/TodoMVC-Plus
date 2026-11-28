@@ -1,56 +1,27 @@
 {
   "schemaVersion": 1,
-  "provider": "google-ai-studio-free-tier",
-  "costUsd": 0,
-  "generatedAt": "2026-11-27T05:36:48.203Z",
+  "provider": "claude-code-local",
+  "generatedAt": "2026-11-28T16:02:26.908Z",
   "totals": {
-    "calls": 4,
-    "promptTokens": 21457,
-    "candidatesTokens": 3475,
-    "thoughtsTokens": 0,
-    "totalTokens": 24932,
-    "elapsedMs": 9180
+    "calls": 1,
+    "turns": 52,
+    "inputTokens": 54,
+    "outputTokens": 34765,
+    "costUsdEquivalent": 0.8928346999999999,
+    "elapsedMs": 230312
   },
   "calls": [
     {
-      "phase": "initial-build",
-      "timestamp": "2026-11-27T05:35:34.158Z",
-      "model": "gemini-3.1-flash-lite",
-      "elapsedMs": 3342,
-      "promptTokenCount": 4047,
-      "candidatesTokenCount": 1077,
-      "thoughtsTokenCount": 0,
-      "totalTokenCount": 5124
-    },
-    {
-      "phase": "repair-1",
-      "timestamp": "2026-11-27T05:36:02.932Z",
-      "model": "gemini-3.1-flash-lite",
-      "elapsedMs": 2297,
-      "promptTokenCount": 5055,
-      "candidatesTokenCount": 875,
-      "thoughtsTokenCount": 0,
-      "totalTokenCount": 5930
-    },
-    {
-      "phase": "repair-2",
-      "timestamp": "2026-11-27T05:36:07.587Z",
-      "model": "gemini-3.1-flash-lite",
-      "elapsedMs": 2487,
-      "promptTokenCount": 6062,
-      "candidatesTokenCount": 1188,
-      "thoughtsTokenCount": 0,
-      "totalTokenCount": 7250
-    },
-    {
-      "phase": "repair-3",
-      "timestamp": "2026-11-27T05:36:23.518Z",
-      "model": "gemini-3.1-flash-lite",
-      "elapsedMs": 1054,
-      "promptTokenCount": 6293,
-      "candidatesTokenCount": 335,
-      "thoughtsTokenCount": 0,
-      "totalTokenCount": 6628
+      "phase": "incremental-build",
+      "timestamp": "2026-11-28T16:02:13.969Z",
+      "provider": "claude-code",
+      "model": "sonnet",
+      "costUsd": 0.8928346999999999,
+      "turns": 52,
+      "inputTokens": 54,
+      "outputTokens": 34765,
+      "cacheReadTokens": 2090807,
+      "elapsedMs": 230312
     }
   ]
 }
