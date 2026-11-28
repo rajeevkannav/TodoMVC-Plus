@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "provider": "claude-code-local",
+  "generatedAt": "2026-11-28T15:26:00.197Z",
+  "totals": {
+    "calls": 5,
+    "turns": 57,
+    "inputTokens": 108,
+    "outputTokens": 40608,
+    "costUsdEquivalent": 1.4320262000000001,
+    "elapsedMs": 322823
+  },
+  "calls": [
+    {
+      "phase": "incremental-build",
+      "timestamp": "2026-11-28T15:21:47.345Z",
+      "provider": "claude-code",
+      "model": "sonnet",
+      "costUsd": 0.3048024000000001,
+      "turns": 12,
+      "inputTokens": 22,
+      "outputTokens": 10059,
+      "cacheReadTokens": 526804,
+      "elapsedMs": 74494
+    },
+    {
+      "phase": "repair-1",
+      "timestamp": "2026-11-28T15:23:15.839Z",
+      "provider": "claude-code",
+      "model": "sonnet",
+      "costUsd": 0.3912739,
+      "turns": 19,
+      "inputTokens": 32,
+      "outputTokens": 11578,
+      "cacheReadTokens": 850739,
+      "elapsedMs": 88395
+    },
+    {
+      "phase": "repair-2",
+      "timestamp": "2026-11-28T15:24:23.497Z",
+      "provider": "claude-code",
+      "model": "sonnet",
+      "costUsd": 0.3266436999999999,
+      "turns": 12,
+      "inputTokens": 24,
+      "outputTokens": 9098,
+      "cacheReadTokens": 564757,
+      "elapsedMs": 67547
+    },
+    {
+      "phase": "repair-3",
+      "timestamp": "2026-11-28T15:25:14.277Z",
+      "provider": "claude-code",
+      "model": "sonnet",
+      "costUsd": 0.22046610000000005,
+      "turns": 7,
+      "inputTokens": 18,
+      "outputTokens": 5024,
+      "cacheReadTokens": 332821,
+      "elapsedMs": 50688
+    },
+    {
+      "phase": "repair-4",
+      "timestamp": "2026-11-28T15:25:56.063Z",
+      "provider": "claude-code",
+      "model": "sonnet",
+      "costUsd": 0.1888401,
+      "turns": 7,
+      "inputTokens": 12,
+      "outputTokens": 4849,
+      "cacheReadTokens": 266341,
+      "elapsedMs": 41699
+    }
+  ]
+}
