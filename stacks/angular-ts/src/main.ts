@@ -1,5 +1,11 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
-import 'zone.js';
+import { applyTheme, loadTheme } from './app/storage';
 
-bootstrapApplication(AppComponent).catch(err => console.error(err));
+// Apply the persisted theme before the first render to avoid a flash of the wrong theme.
+applyTheme(loadTheme());
+
+bootstrapApplication(AppComponent, {
+  providers: [provideZonelessChangeDetection()],
+}).catch((err: unknown) => console.error(err));
