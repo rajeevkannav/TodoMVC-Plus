@@ -1,0 +1,13 @@
+# ProductionLine (mogra) spoke config for the TodoMVC+ showcase.
+# Builds run on the owner's machine with Claude Code (node src/local-runner.mjs build|next);
+# GitHub still verifies every PR labelled mogra:built, merges it and deploys GitHub Pages.
+version: 1
+runtime:
+  build: local
+  harness: claude-code
+  model: sonnet
+outcome:
+  blueprint: todomvc-plus
+  mode: greenfield-stack
+deployment:
+  target: github-pages
